@@ -1,10 +1,21 @@
+# Desafio da semana #6
+
+```js
+
 /*
 Vamos falar um pouco sobre "Futebol". Escolha um campeonato estadual qualquer
 para começar o desafio.
 Declare uma variável chamada `championship` que receberá o nome do campeonato,
 e imprima o nome desse campeonato no console.
 */
-// ?
+
+var brasileirao = 'Campeonato Brasileiro';
+
+console.log(brasileirao);
+
+// Resultado:
+
+Campeonato Brasileiro
 
 /*
 Declare uma variável chamada `teams`, que receberá um array com 5 elementos.
@@ -12,7 +23,8 @@ Os elementos serão nomes de times do campeonato escolhido, e os nomes devem
 estar na ordem em que eles aparecem na tabela no momento da solução desse
 desafio.
 */
-// ?
+
+var teams = ['Vasco', 'Palmeiras', 'Botafogo', 'Gremio', 'Atletico Mineiro'];
 
 console.log( 'Times que estão participando do campeonato:', teams );
 
@@ -32,19 +44,62 @@ Crie uma função chamada `showTeamPosition` com as seguintes características:
     - Se não houver time para a posição passada, deve retornar a mensagem:
     "Não temos a informação do time que está nessa posição."
 */
-// ?
+
+function showTeamPosition(posicao) {
+    if (posicao < 1 || posicao > 5) {
+        return 'Não temos a informação do time que está nessa posição.';
+    }
+
+    return 'O time que está em ' + posicao + 'º lugar é o ' + teams[posicao - 1] + '.';
+}
 
 /*
 Escolha 4 times do campeonato selecionado e mostre a posição dele, usando a
 função acima. Entre esses 4, adicione 1 que não esteja entre os 5 primeiros.
 */
-// ?
+
+console.log(showTeamPosition(0));
+console.log(showTeamPosition(1));
+console.log(showTeamPosition(2));
+console.log(showTeamPosition(3));
+console.log(showTeamPosition(4));
+console.log(showTeamPosition(5));
+console.log(showTeamPosition(6));
+
+// Resultado:
+
+Não temos a informação do time que está nessa posição.
+O time que está em 1º lugar é o Vasco.
+O time que está em 2º lugar é o Palmeiras.
+O time que está em 3º lugar é o Botafogo.
+O time que está em 4º lugar é o Gremio.
+O time que está em 5º lugar é o Atletico Mineiro.
+Não temos a informação do time que está nessa posição.
 
 /*
 Mostre os números de 20 a 30 no console (inclusive o 30), usando a estrutura de
 repetição "while".
 */
-// ?
+
+var numero = 20;
+
+while(numero <= 30) {
+    console.log(numero++);
+}
+
+// Resultado:
+
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
 
 /*
 Crie uma função chamada `convertToHex`, com as seguintes características:
@@ -58,9 +113,56 @@ Crie uma função chamada `convertToHex`, com as seguintes características:
     a frase:
     "Não temos o equivalente hexadecimal para [COR]."
 */
-// ?
+
+function convertToHex( cor) {
+
+    var hexad;
+
+    switch(cor) {
+        case 'red':
+            hexad = '#FF0000';
+            break;
+        case 'green':
+            hexad = '#00FF00';
+            break;
+        case 'white':
+            hexad = '#FFFFFF';
+            break;
+        case 'blue':
+            hexad = '#0000FF';
+            break;
+        case 'black':
+            hexad = '#000000';
+            break;
+        case 'yellow':
+            hexad = '#FFFF00';
+            break;
+        default:
+        return 'Não temos o equivalente hexadecimal para ' + cor + '.';
+    }
+    return 'O hexadecimal para a cor ' + cor + ' é ' + hexad + '.';
+}
 
 /*
 Tente mostrar o hexadecimal de 8 cores diferentes usando a função criada acima.
 */
-// ?
+
+console.log(convertToHex('red'));
+console.log(convertToHex('green'));
+console.log(convertToHex('white'));
+console.log(convertToHex('blue'));
+console.log(convertToHex('black'));
+console.log(convertToHex('yellow'));
+console.log(convertToHex('purple'));
+
+// Resultado:
+
+O hexadecimal para a cor red é #FF0000.
+O hexadecimal para a cor green é #00FF00.
+O hexadecimal para a cor white é #FFFFFF.
+O hexadecimal para a cor blue é #0000FF.
+O hexadecimal para a cor black é #000000.
+O hexadecimal para a cor yellow é #FFFF00.
+Não temos o equivalente hexadecimal para purple.
+
+```
