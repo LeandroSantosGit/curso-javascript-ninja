@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Challenge - 28</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<h1>Consultar CEP</h1>
+	<form data-js="form-cep">
+		<input type="text" data-js="input-cep" size="10" maxlength="9" required="required">
+		<button type="submit" data-js="submit">Consultar CEP</button>
+	</form>
+
+	<div>
+		<p data-js="status"></p>
+	</div>
+
+	<div data-js="cep-info">
+		<table data-js="cep-table">
+			<tr>
+				<th colspan="2">Informações do CEP</th>
+			</tr>
+			<tr>
+				<td class="col-dadosCEP">
+					<p><strong>Logradouro:</strong></span></p>
+				</td>
+				<td>
+					<p><span data-js="logradouro"></p>
+				</td>
+			<tr>			
+				<td class="col-dadosCEP">
+					<p><strong>Bairro:</strong></p>
+				</td>
+				<td>
+					<p><span data-js="bairro"></span></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="col-dadosCEP">
+					<p><strong>Estado:</strong></p>
+				</td>
+				<td>
+					<p><span data-js="estado"></span></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="col-dadosCEP">
+					<p><strong>Cidade:</strong></p>
+				</td>
+				<td>
+					<p><span data-js="cidade"></span></p>
+				</td>
+			</tr>
+			<tr>
+				<td class="col-dadosCEP">
+					<p><strong>CEP:</strong></p>
+				</td>
+				<td>
+					<p><span data-js="cep"></span></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<script src="challenge-28.js"></script>
+</body>
+</html>
